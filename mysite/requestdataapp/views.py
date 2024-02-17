@@ -17,6 +17,7 @@ def process_get_view(request: HttpRequest) -> HttpResponse:
 
 
 def user_form(request: HttpRequest) -> HttpResponse:
+
     return render(request, 'requestdataapp/user-bio-form.html')
 
 
