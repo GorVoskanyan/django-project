@@ -4,7 +4,7 @@ from django.http import HttpRequest
 
 from .models import Product, Order
 from .admin_mixins import ExportAsCSVMixin
-# Register your models here.
+
 
 # admin.site.register(Product)
 
@@ -18,6 +18,7 @@ def mark_archived(modeladmin: admin.ModelAdmin, request: HttpRequest, queryset: 
 @admin.action(description='Unarchive Products')
 def mark_unarchived(modeladmin: admin.ModelAdmin, request: HttpRequest, queryset: QuerySet):
     queryset.update(archived=False)
+    
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin, ExportAsCSVMixin):
     actions = [
