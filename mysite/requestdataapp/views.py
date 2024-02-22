@@ -22,10 +22,12 @@ def user_form(request: HttpRequest) -> HttpResponse:
 
 
 def handle_file_upload(request: HttpRequest) -> HttpResponse:
+    FILE_MAX_SIZE = 1024 * 1024
     if request.method == 'POST' and request.FILES.get('myfile'):
         myfile = request.FILES['myfile']
-        fs = FileSystemStorage()
-        filename = fs.save(myfile.name, myfile)
-        print('Saved file: ', filename)
-
+        if myfile.size <= FILE_MAX_SIZE:
+            fs = FileSystemStorage()
+            filename = fs.save(myfile.name, myfile)
+            print('Saved file: ', filename)
+        raise
     return render(request, 'requestdataapp/file-upload.html')
