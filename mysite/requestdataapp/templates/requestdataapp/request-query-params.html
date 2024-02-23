@@ -5,8 +5,7 @@
 {% endblock %}
 
 {% block body %}
-    <h1>Good evening {{ request.GET.name }}</h1>
-
+    <h1>Good evening {% firstof request.GET.name 'User' %}</h1>
     <div>
         <pre>
             a = '{{ a }}'
