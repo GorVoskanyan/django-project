@@ -1,6 +1,8 @@
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 from django.contrib.auth.models import Group
+
+from .forms import ProductForm
 from .models import Product, Order
 
 from timeit import default_timer
@@ -38,6 +40,13 @@ def product_list(request: HttpRequest):
 
     return render(request, 'shop/products.html', context=context)
 
+
+def create_product(request: HttpRequest) -> HttpResponse:
+    form = ProductForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'shop/create-product.html', context=context)
 
 def orders_list(request: HttpRequest):
     context = {
