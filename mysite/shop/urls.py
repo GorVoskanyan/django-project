@@ -7,7 +7,7 @@ urlpatterns = [
     path('', shop_index, name='index'),
     path('groups/', groups_list, name='groups'),
     path('products/', product_list, name='products'),
-    path('products/create', create_product, name='create_product'),
+    path('products/create/', create_product, name='create_product'),
     path('orders/', orders_list, name='orders'),
 
 ]
