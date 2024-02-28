@@ -28,4 +28,9 @@
             <p>No orders yet</p>
         {% endif %}
     </div>
+    <div>
+    <a href="{% url 'shop:create_order' %}"
+    >Create a new order
+    </a>
+    </div>
 {% endblock %}

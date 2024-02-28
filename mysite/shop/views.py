@@ -5,7 +5,7 @@ from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, redirect, reverse
 from django.contrib.auth.models import Group
 
-from .forms import ProductForm
+from .forms import ProductForm, OrderForm
 from .models import Product, Order
 
 
@@ -59,6 +59,24 @@ def create_product(request: HttpRequest) -> HttpResponse:
         'form': form
     }
     return render(request, 'shop/create-product.html', context=context)
+
+def create_order(request: HttpRequest) -> HttpResponse:
+    if request.method == 'POST':
+        form = OrderForm(request.POST)
+        if form.is_valid():
+            # name = form.cleaned_data('name')
+            # Product.objects.create(**form.cleaned_data)
+            form.save()
+            url = reverse('shop:orders')
+            return redirect(url)
+    else:
+        form = OrderForm()
+
+    context = {
+        'form': form
+    }
+    return render(request, 'shop/create-order.html', context=context)
+
 
 def orders_list(request: HttpRequest):
     context = {
