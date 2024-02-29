@@ -35,8 +35,7 @@ def handle_file_upload(request: HttpRequest) -> HttpResponse:
             fs = FileSystemStorage()
             filename = fs.save(myfile.name, myfile)
             print('Saved file: ', filename)
-    else:
-        form = UploadFileForm()
+    else:        form = UploadFileForm()
     context = {
         "form": form,
     }
