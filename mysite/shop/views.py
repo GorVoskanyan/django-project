@@ -40,6 +40,14 @@ class GroupsListView(View):
 
         return redirect(request.path)
 
+
+class ProductDetailsView(View):
+    def get(self, request: HttpRequest, pk: int) -> HttpResponse:
+        product = Product.objects.get(pk=pk)
+        context = {
+            'product': product,
+        }
+        return render(request, "shop/products-details.html", context=context)
 def product_list(request: HttpRequest):
     context = {
         'products': Product.objects.all()

@@ -8,16 +8,14 @@
     <h1>Products:</h1>
     <div>
         {% for product in products %}
-            <ul>
-                <li>
-                    {{product.name}}
-                </li>
-                    <ul>
-                        <li>${{product.price}} </li>
-                        <li>Discount {{product.discount}}</li>
-                    </ul>
+            <div>
+                <p><a href="{% url 'shop:product_details' pk=product.pk %}"
+                >Name: {{ product.name }}</a></p>
+                <p>Price: {{ product.price }}</p>
+                <p>Discount: {% firstof product.discount 'no discount' %}</p>
+            </div>
 
-            </ul>
+
         {% endfor %}
     </div>
     <div>
