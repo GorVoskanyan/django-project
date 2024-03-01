@@ -1,12 +1,12 @@
 from timeit import default_timer
 
 
-from django.http import HttpRequest, HttpResponse
+from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.models import Group
 from django.urls import reverse_lazy
 from django.views import View
-from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView
+from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
 
 from .forms import ProductForm, GroupForm
 from .models import Product, Order
@@ -42,14 +42,6 @@ class GroupsListView(View):
         return redirect(request.path)
 
 
-# class ProductDetailsView(View):
-#     def get(self, request: HttpRequest, pk: int) -> HttpResponse:
-#         product = get_object_or_404(Product, pk=pk)
-#         context = {
-#             'product': product,
-#         }
-#         return render(request, "shop/products-details.html", context=context)
-
 
 class ProductDetailsView(DetailView):
     template_name = 'shop/products-details.html'
@@ -57,17 +49,10 @@ class ProductDetailsView(DetailView):
     context_object_name = "product"
 
 
-# class ProductsListView(TemplateView):
-#     template_name = 'shop/products.html'
-#
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         context["products"] = Product.objects.all()
-#         return context
-
 class ProductsListView(ListView):
     template_name = 'shop/products.html'
-    model = Product
+    # model = Product
+    queryset = Product.objects.filter(archived=False)
     context_object_name = 'products'
 
 
@@ -89,22 +74,16 @@ class ProductUpdateView(UpdateView):
             kwargs={'pk': self.object.pk},
         )
 
-def create_product(request: HttpRequest) -> HttpResponse:
-    if request.method == 'POST':
-        form = ProductForm(request.POST)
-        if form.is_valid():
-            # name = form.cleaned_data('name')
-            # Product.objects.create(**form.cleaned_data)
-            form.save()
-            url = reverse('shop:products')
-            return redirect(url)
-    else:
-        form = ProductForm()
 
-    context = {
-        'form': form
-    }
-    return render(request, 'shop/create-product.html', context=context)
+class ProductDeleteView(DeleteView):
+    model = Product
+    success_url = reverse_lazy('shop:products')
+
+    def form_valid(self, form):
+        success_url = self.get_success_url()
+        self.object.archived = True
+        self.object.save()
+        return HttpResponseRedirect(success_url)
 
 
 class OrdersListView(ListView):
