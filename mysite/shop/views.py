@@ -4,8 +4,9 @@ from timeit import default_timer
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.models import Group
+from django.urls import reverse_lazy
 from django.views import View
-from django.views.generic import TemplateView, ListView, DetailView
+from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView
 
 from .forms import ProductForm, GroupForm
 from .models import Product, Order
@@ -70,6 +71,11 @@ class ProductsListView(ListView):
     context_object_name = 'products'
 
 
+class ProductCreateView(CreateView):
+    model = Product
+    fields = "name", "price", "description", "discount"
+    # form_class = ProductForm
+    success_url = reverse_lazy("shop:products")
 
 
 def create_product(request: HttpRequest) -> HttpResponse:
