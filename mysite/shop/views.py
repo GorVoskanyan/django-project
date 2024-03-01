@@ -2,7 +2,7 @@ from timeit import default_timer
 
 
 from django.http import HttpRequest, HttpResponse
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.models import Group
 from django.views import View
 
@@ -43,7 +43,7 @@ class GroupsListView(View):
 
 class ProductDetailsView(View):
     def get(self, request: HttpRequest, pk: int) -> HttpResponse:
-        product = Product.objects.get(pk=pk)
+        product = get_object_or_404(Product, pk=pk)
         context = {
             'product': product,
         }
