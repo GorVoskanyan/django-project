@@ -6,6 +6,7 @@
 
 {% block body %}
     <h1>Products:</h1>
+    {% if products %}
     <div>
         {% for product in products %}
             <div>
@@ -18,6 +19,10 @@
 
         {% endfor %}
     </div>
+    {% else %}
+        <h3>No products yet</h3>
+    {% endif %}
+
     <div>
     <a href="{% url 'shop:create_product' %}"
     >Create a new product
