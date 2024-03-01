@@ -90,11 +90,17 @@ def create_product(request: HttpRequest) -> HttpResponse:
     return render(request, 'shop/create-product.html', context=context)
 
 
+class OrdersListView(ListView):
+    queryset = (
+        Order.objects
+        .select_related('user')
+        .prefetch_related('products')
+    )
 
 
-def orders_list(request: HttpRequest):
-    context = {
-        'orders': Order.objects.select_related('user').prefetch_related('products').all(),
-    }
-
-    return render(request, 'shop/orders.html', context=context)
+class OrderDetailView(DetailView):
+    queryset = (
+        Order.objects
+        .select_related('user')
+        .prefetch_related('products')
+    )
