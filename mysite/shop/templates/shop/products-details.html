@@ -15,4 +15,8 @@
     <div>
         <a href="{% url 'shop:products' %}">Back to products</a>
     </div>
+
+    <div>
+        <a href="{% url 'shop:update_product' pk=product.pk %}">Update product</a>
+    </div>
 {% endblock %}

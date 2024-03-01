@@ -78,6 +78,17 @@ class ProductCreateView(CreateView):
     success_url = reverse_lazy("shop:products")
 
 
+class ProductUpdateView(UpdateView):
+    model = Product
+    fields = "name", "description", "price", "discount"
+    template_name_suffix = "_update_form"
+
+    def get_success_url(self):
+        return reverse(
+            "shop:product_details",
+            kwargs={'pk': self.object.pk},
+        )
+
 def create_product(request: HttpRequest) -> HttpResponse:
     if request.method == 'POST':
         form = ProductForm(request.POST)
