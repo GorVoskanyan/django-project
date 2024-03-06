@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.views import LogoutView
 from django.http import HttpRequest, HttpResponse
@@ -64,12 +65,11 @@ def get_cookie_view(request: HttpRequest) -> HttpResponse:
     value = request.COOKIES.get("fizz", "default value")
     return HttpResponse(f"Cookie value: {value!r}")
 
-
 def set_session_view(request: HttpRequest) -> HttpResponse:
     request.session["foobar"] = "spameggs"
     return HttpResponse('Session set')
 
-
+@login_required
 def get_session_view(request: HttpRequest) -> HttpResponse:
     value = request.session.get('foobar', 'default value')
     return HttpResponse(f"Session value {value!r}")
