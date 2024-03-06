@@ -7,7 +7,7 @@ from django.contrib.auth.models import Group
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
-from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
 
 from .forms import ProductForm, GroupForm
 from .models import Product, Order
@@ -57,7 +57,11 @@ class ProductsListView(ListView):
     context_object_name = 'products'
 
 
-class ProductCreateView(CreateView):
+class ProductCreateView(UserPassesTestMixin, CreateView):
+    def test_func(self):
+        # return self.request.user.groups.filter(name='secret-group').exists()
+        return self.request.user.is_superuser
+
     model = Product
     fields = "name", "price", "description", "discount"
     # form_class = ProductForm
