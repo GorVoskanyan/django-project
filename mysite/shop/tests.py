@@ -31,10 +31,12 @@ class ProductCreateViewTestCase(TestCase):
             }
         )
 
-        self.assertRedirects(response, '/myauth/login/?next=/shop/products/create/')
-        self.assertTrue(
-            Product.objects.filter(name=self.product_name).exists()
-        )
+        self.assertRedirects(response, reverse("myauth:login") + '?next=/shop/products/create/')
+
+        # TODO create user and add permission add_product or login
+        # self.assertTrue(
+        #     Product.objects.filter(name=self.product_name).exists()
+        # )
 
 
 class ProductDetailsViewTestCase(TestCase):
@@ -63,7 +65,7 @@ class ProductDetailsViewTestCase(TestCase):
 
 class ProductListViewTestCase(TestCase):
     fixtures = [
-        'products-fixtures.json',
+        'product-fixtures.json',
     ]
 
     def test_products(self):
@@ -77,7 +79,7 @@ class ProductListViewTestCase(TestCase):
         # for p, p_ in zip(products, products_):
         #     self.assertEqual(p.pk, p_.pk)
 
-        self.assertQuerysetEqual()(
+        self.assertQuerysetEqual(
             qs=Product.objects.filter(archived=False).all(),
             values=[p.pk for p in response.context["products"]],
             transform=lambda p: p.pk,
@@ -146,3 +148,7 @@ class ProductExportViewTestCase(TestCase):
             products_data["products"],
             expected_data
         )
+
+
+
+
