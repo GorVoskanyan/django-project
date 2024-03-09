@@ -1,6 +1,8 @@
 from random import choices
 from string import ascii_letters
 
+from django.conf import settings
+from django.contrib.auth.models import User
 from django.test import TestCase
 from django.urls import reverse
 
@@ -59,3 +61,56 @@ class ProductDetailsViewTestCase(TestCase):
         self.assertContains(response, self.product.name)
 
 
+class ProductListViewTestCase(TestCase):
+    fixtures = [
+        'products-fixtures.json',
+    ]
+
+    def test_products(self):
+        response = self.client.get(reverse("shop:products"))
+
+        # for product in Product.objects.filter(archived=False).all():
+        #     self.assertContains(response, product.name)
+
+        # products = Product.objects.filter(archived=False).all()
+        # products_ = response.context["products"]
+        # for p, p_ in zip(products, products_):
+        #     self.assertEqual(p.pk, p_.pk)
+
+        self.assertQuerysetEqual()(
+            qs=Product.objects.filter(archived=False).all(),
+            values=[p.pk for p in response.context["products"]],
+            transform=lambda p: p.pk,
+        )
+
+        self.assertTemplateUsed(response, 'shop/products.html')
+
+
+class OrdersListViewTestCase(TestCase):
+    @classmethod
+    def setUpClass(cls):
+        # cls.credentials = dict(username='Bob_test', password='qwerty')
+        # cls.user = User.objects.create_user(**cls.credentials)
+
+        cls.user = User.objects.create_user(username='Bob_test', password='qwerty')
+    @classmethod
+    def tearDownClass(cls):
+        cls.user.delete()
+    def setUp(self) -> None:
+
+        # self.client.login(**self.credentials)
+
+        self.client.force_login(self.user)
+    def test_orders_view(self):
+        response = self.client.get(reverse("shop:orders"))
+        self.assertContains(response, "Orders")
+
+
+    def test_orders_view_not_authenticated(self):
+        self.client.logout()
+        response = self.client.get(reverse("shop:orders"))
+
+        # self.assertRedirects(response, str(settings.LOGIN_URL))
+
+        self.assertEqual(response.status_code, 302)
+        self.assertIn(str(settings.LOGIN_URL), response.url)

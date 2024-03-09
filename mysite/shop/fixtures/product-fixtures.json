@@ -1,0 +1,62 @@
+[
+  {
+    "model": "shop.product",
+    "pk": 1,
+    "fields": {
+      "name": "Laptop",
+      "description": "",
+      "price": "2999.00",
+      "discount": 0,
+      "created_at": "12:20:14.943",
+      "archived": false
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 2,
+    "fields": {
+      "name": "Desktop",
+      "description": "Best Desktop",
+      "price": "1599.00",
+      "discount": 0,
+      "created_at": "12:20:14.950",
+      "archived": true
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 3,
+    "fields": {
+      "name": "Smartphone",
+      "description": "",
+      "price": "999.00",
+      "discount": 0,
+      "created_at": "12:20:14.956",
+      "archived": false
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 4,
+    "fields": {
+      "name": "Tablet 2",
+      "description": "New tablet",
+      "price": "999.00",
+      "discount": 10,
+      "created_at": "21:35:45.146",
+      "archived": true
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 6,
+    "fields": {
+      "name": "Asus Pro",
+      "description": "Super Fast",
+      "price": "4999.00",
+      "discount": 20,
+      "created_at": "21:59:10.255",
+      "archived": false
+    }
+  }
+]
