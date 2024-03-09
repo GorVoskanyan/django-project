@@ -174,3 +174,30 @@ class OrderDetailViewTestCase(TestCase):
     def test_order_details(self):
         # TODO: Write test to check if Order Detail View displays order details correctly.
         pass
+
+
+# If you want to complete a task with a star, take a TDD test.
+class OrdersExportTestCase(TestCase):
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        # TODO: Create a user with the required access level.
+        pass
+
+    @classmethod
+    def tearDownClass(cls):
+        super().tearDownClass()
+        # TODO: Remove the created user.
+        pass
+
+    def setUp(self):
+        # TODO: Log in the user.
+        pass
+
+    def test_list_orders(self):
+        # TODO: Write a test to check for receiving a list of orders.
+        # The response code status should be 200.
+        # The JSON body of the response must contain the expected values.
+        pass
+
+# TODO: Create fixtures for Users, Products, and Orders.
