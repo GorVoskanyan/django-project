@@ -150,5 +150,27 @@ class ProductExportViewTestCase(TestCase):
         )
 
 
+class OrderDetailViewTestCase(TestCase):
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        # TODO: Set up necessary test data and user permissions.
+        pass
 
+    @classmethod
+    def tearDownClass(cls):
+        super().tearDownClass()
+        # TODO: Clean up test data and user permissions.
+        pass
 
+    def setUp(self):
+        # TODO: Log in user and create an order for testing.
+        pass
+
+    def tearDown(self):
+        # TODO: Remove the created order.
+        pass
+
+    def test_order_details(self):
+        # TODO: Write test to check if Order Detail View displays order details correctly.
+        pass
