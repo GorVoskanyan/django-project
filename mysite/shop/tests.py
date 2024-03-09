@@ -114,3 +114,35 @@ class OrdersListViewTestCase(TestCase):
 
         self.assertEqual(response.status_code, 302)
         self.assertIn(str(settings.LOGIN_URL), response.url)
+
+
+
+
+
+# TDD - Test-Driven Development
+class ProductExportViewTestCase(TestCase):
+    fixtures = [
+        'product-fixtures.json',
+    ]
+
+    def test_get_products_view(self):
+        response = self.client.get(
+            reverse("shop:products-export"),
+        )
+        self.assertEqual(response.status_code, 200)
+        products = Product.objects.order_by("pk").all()
+        expected_data = [
+            {
+                "pk": product.pk,
+                "name": product.name,
+                "price": product.price,
+                "archived": product.archived,
+            }
+            for product in products
+        ]
+
+        products_data = response.json()
+        self.assertEqual(
+            products_data["products"],
+            expected_data
+        )

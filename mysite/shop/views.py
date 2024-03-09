@@ -1,7 +1,7 @@
 from timeit import default_timer
 
 
-from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
+from django.http import HttpRequest, HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.models import Group
 from django.urls import reverse_lazy
@@ -106,3 +106,4 @@ class OrderDetailView(PermissionRequiredMixin, DetailView):
         .select_related('user')
         .prefetch_related('products')
     )
+
