@@ -135,7 +135,7 @@ class ProductExportViewTestCase(TestCase):
             {
                 "pk": product.pk,
                 "name": product.name,
-                "price": product.price,
+                "price": str(product.price),
                 "archived": product.archived,
             }
             for product in products
