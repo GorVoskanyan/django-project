@@ -81,7 +81,8 @@ class ProductUpdateView(UpdateView):
 
 
 class ProductDeleteView(DeleteView):
-    model = Product
+    # model = Product
+    queryset = Product.objects.prefetch_related("images")
     success_url = reverse_lazy('shop:products')
 
     def form_valid(self, form):
