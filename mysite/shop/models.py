@@ -2,7 +2,13 @@ from django.contrib.auth.models import User
 from django.db import models
 
 
-# Create your models here.
+def product_preview_directory_path(instance: 'Product', filename: str) -> str:
+    return "products/product_{pk}/preview/{filename}".format(
+        pk=instance.pk,
+        filename=filename
+    )
+
+
 class Product(models.Model):
     class Meta:
         ordering = ['name', 'price']
@@ -15,6 +21,7 @@ class Product(models.Model):
     discount = models.SmallIntegerField(default=0)
     created_at = models.TimeField(auto_now_add=True)
     archived = models.BooleanField(default=False)
+    preview = models.ImageField(null=True, blank=True, upload_to=product_preview_directory_path)
 
     # @property
     # def short_description(self):
