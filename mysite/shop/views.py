@@ -10,7 +10,7 @@ from django.views.generic import TemplateView, ListView, DetailView, CreateView,
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
 
 from .forms import ProductForm, GroupForm
-from .models import Product, Order
+from .models import Product, Order, ProductImage
 
 
 class ShopIndexView(View):
@@ -70,8 +70,9 @@ class ProductCreateView(UserPassesTestMixin, CreateView):
 
 class ProductUpdateView(UpdateView):
     model = Product
-    fields = "name", "description", "price", "discount", "preview"
+    # fields = "name", "description", "price", "discount", "preview"
     template_name_suffix = "_update_form"
+    form_class = ProductForm
 
     def get_success_url(self):
         return reverse(
@@ -79,7 +80,15 @@ class ProductUpdateView(UpdateView):
             kwargs={'pk': self.object.pk},
         )
 
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        for image in form.files.getlist("images"):
+            ProductImage.objects.create(
+                product=self.object,
+                image=image,
+            )
 
+        return response
 class ProductDeleteView(DeleteView):
     # model = Product
     queryset = Product.objects.prefetch_related("images")
