@@ -7,10 +7,12 @@
     <hr>
     {% csrf_token %}
     {{ form.as_p }}
-    {{ form_av.avatar }}
+    {{ form_av.as_p }}
 
     <button type="submit">Save Changes</button>
-    {% comment %} <a href="{% url 'myauth:user_page' %}">Bact to Your Page</a> {% endcomment %}
+    <div>
+        <a href="{% url 'myauth:about-me' %}">Bact to Your Page</a>
+    </div>
 </form>
 
 {% endblock %}
