@@ -11,7 +11,7 @@ from django.views.generic import TemplateView, CreateView
 from django.utils.translation import gettext_lazy as _
 
 from .models import Profile
-
+from .forms import EditProfileForm, AvatarForm 
 
 class HelloView(View):
     def get(self, request: HttpRequest) -> HttpResponse:
@@ -91,3 +91,30 @@ def get_session_view(request: HttpRequest) -> HttpResponse:
 class FooBarView(View):
     def get(self, request: HttpRequest) -> JsonResponse:
         return JsonResponse({"foo": "bar", "spam": "eggs"})
+    
+@login_required
+def edit_profile(request: HttpRequest) -> HttpResponse:
+    if request.method == 'POST':
+        form = EditProfileForm(request.POST, instance=request.user)
+        profile, created = Profile.objects.get_or_create(
+            user=request.user
+        )
+        form_av = AvatarForm(request.POST, request.FILES, instance=profile)
+        
+        if form.is_valid() and form_av.is_valid():
+            form.save()
+            form_av.save()
+            
+            return redirect('myauth:about-me')
+    else:
+        form = EditProfileForm(instance=request.user)
+        profile, created = Profile.objects.get_or_create(
+            user=request.user
+        )
+        form_av = AvatarForm(instance=profile)
+        
+    context = {
+        "form": form,
+        "form_av": form_av,
+    }
+    return render(request, 'myauth/edit-profile.html', context=context)
