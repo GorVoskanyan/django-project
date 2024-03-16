@@ -83,7 +83,7 @@ class ProductUpdateView(UpdateView):
     def form_valid(self, form):
         response = super().form_valid(form)
         for image in form.files.getlist("images"):
-            ProductImage.objects.create(
+            ProductImage.objects.get_or_create(
                 product=self.object,
                 image=image,
             )

@@ -54,6 +54,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
+    'django.middleware.locale.LocaleMiddleware',
 
     # 'requestdataapp.middlewares.set_useragent_on_request_middleware',
     # 'requestdataapp.middlewares.CountRequestsMiddleware',
@@ -122,6 +124,19 @@ USE_I18N = True
 USE_TZ = True
 
 USE_L10N = True
+
+
+gettext = lambda s: s
+
+LANGUAGES = (
+    ('hy', gettext('Armenian')),
+    ('ru', gettext('Russia')),
+    ('en', gettext('English')),
+)
+
+# MODELTRANSLATION_TRANSLATION_FILES = (
+#     'main.translation',
+# )
 
 LOCALE_PATHS = [
     BASE_DIR / 'locale/'

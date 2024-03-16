@@ -34,10 +34,7 @@ class Product(models.Model):
 
 
 def product_images_directory_path(instance: 'ProductImage', filename: str) -> str:
-     return "products/product_{pk}/images/{filename}".format(
-         pk=instance.pk,
-         filename=filename
-     )
+     return f"products/product_{instance.product.pk}/images/{filename}"
 
 class ProductImage(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='images')
