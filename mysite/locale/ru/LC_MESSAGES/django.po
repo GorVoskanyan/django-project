@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-19 12:41+0000\n"
+"POT-Creation-Date: 2024-03-19 13:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,29 +49,66 @@ msgstr "Список товаров"
 msgid "Products"
 msgstr "Товары"
 
-#: shop/templates/shop/products.html:16
+#: shop/templates/shop/products.html:13
+#, python-format
+msgid ""
+"\n"
+"            There is only one product.\n"
+"            "
+msgid_plural ""
+"\n"
+"            There are %(products_count)s products.\n"
+"        "
+msgstr[0] ""
+"\n"
+"            Доступно %(products_count)s товар.\n"
+"        "
+msgstr[1] ""
+"\n"
+"            Доступно %(products_count)s товара.\n"
+"        "
+msgstr[2] ""
+"\n"
+"            Доступно %(products_count)s товаров.\n"
+"        "
+
+#: shop/templates/shop/products.html:23
 msgctxt "product name"
 msgid "Name"
 msgstr "Название"
 
-#: shop/templates/shop/products.html:17
+#: shop/templates/shop/products.html:24
 msgid "Price"
 msgstr "Цена"
 
-#: shop/templates/shop/products.html:18
+#: shop/templates/shop/products.html:25
 msgid "no discount"
 msgstr "Нет скидки"
 
-#: shop/templates/shop/products.html:19
+#: shop/templates/shop/products.html:26
 #, fuzzy
 #| msgid "no discount"
 msgid "Discount"
 msgstr "Скидка"
 
-#: shop/templates/shop/products.html:30
-msgid "No products yet"
-msgstr "Пока нет товаров"
-
-#: shop/templates/shop/products.html:35
+#: shop/templates/shop/products.html:39
 msgid "Create a new product"
 msgstr "Создать товар"
+
+#: shop/templates/shop/products.html:44
+#, python-format
+msgid ""
+"\n"
+"            <h3>No products yet</h3>\n"
+"            <a href=\"%(url create_product_url)s\"\n"
+"            >Create a new one</a>\n"
+"        "
+msgstr ""
+"\n"
+"            <h3>Пока нет товаров</h3>\n"
+"            <a href=\"%(url create_product_url)s\"\n"
+"            >Создать новый товар</a>\n"
+"        "
+
+#~ msgid "No products yet"
+#~ msgstr "Пока нет товаров"

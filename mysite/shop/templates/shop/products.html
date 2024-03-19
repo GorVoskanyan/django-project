@@ -9,6 +9,13 @@
 {% block body %}
     <h1>{% translate 'Products' %}</h1>
     {% if products %}
+        <div>
+        {% blocktranslate count products_count=products|length %}
+            There is only one product.
+            {% plural %}
+            There are {{ products_count }} products.
+        {% endblocktranslate %}
+        </div>
     <div>
         {% for product in products %}
             <div>
@@ -26,13 +33,18 @@
 
         {% endfor %}
     </div>
-    {% else %}
-        <h3>{% translate 'No products yet' %}</h3>
-    {% endif %}
 
     <div>
-    <a href="{% url 'shop:create_product' %}"
-    >{% translate 'Create a new product' %}
-    </a>
+        <a href="{% url 'shop:create_product' %}"
+        >{% translate 'Create a new product' %}
+        </a>
     </div>
+    {% else %}
+        {% url 'shop:create_product' as create_product_url %}
+        {% blocktranslate %}
+            <h3>No products yet</h3>
+            <a href="{{ url create_product_url }}"
+            >Create a new one</a>
+        {% endblocktranslate %}
+    {% endif %}
 {% endblock %}
