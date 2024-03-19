@@ -28,9 +28,9 @@ msgstr "Привет мир!"
 #, python-brace-format
 msgid "one product"
 msgid_plural "{count} products"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{count} товар"
+msgstr[1] "{count} товара"
+msgstr[2] "{count} товаров"
 msgstr[3] ""
 
 #: mysite/settings.py:137
