@@ -14,6 +14,7 @@ class Product(models.Model):
         ordering = ['name', 'price']
         # db_table = 'tech_product'
         # verbose_name_plural = 'products'
+        # verbose_name = _("Product")
 
     name = models.CharField(max_length=100)
     description = models.TextField(null=False, blank=True)
