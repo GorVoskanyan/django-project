@@ -5,7 +5,7 @@ from django.utils.safestring import mark_safe
 from django.contrib.auth.models import Group
 from django.core import validators
 
-from .models import Product
+from shop.models import Product
 
 
 # class ProductForm(forms.Form):
@@ -54,3 +54,15 @@ class ProductForm(forms.ModelForm):
         fields = ["name", "price", "description", "discount", "preview", "images"]
 
     images = forms.ImageField(widget=MultipleClearableFileInput)
+
+
+
+
+# class ProductForm(forms.ModelForm):
+#     class Meta:
+#         model = Product
+#         fields = "name", "price", "description", "discount", "preview"
+#
+#     images = forms.ImageField(
+#         widget=forms.ClearableFileInput(attrs={'multiple': True}),
+#     )

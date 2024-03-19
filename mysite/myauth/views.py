@@ -7,14 +7,14 @@ from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse, reverse_lazy
 from django.views import View
 from django.views.generic import TemplateView, CreateView
-from django.utils.translation import gettext as _
+from django.utils.translation import gettext_lazy as _
 
 from .models import Profile
 
 
 class HelloView(View):
     def get(self, request: HttpRequest) -> HttpResponse:
-        welcome_message = _("Hello world!")
+        welcome_message = _("welcome hello world")
         return HttpResponse(f"<h1>{welcome_message}</h1>")
 
 

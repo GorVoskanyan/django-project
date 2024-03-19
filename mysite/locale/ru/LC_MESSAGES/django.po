@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-14 11:14+0000\n"
+"POT-Creation-Date: 2024-03-19 11:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,17 +21,13 @@ msgstr ""
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: myauth/views.py:17
-msgid "Hello world!"
+msgid "welcome hello world"
 msgstr "Привет мир!"
 
-#: mysite/settings.py:133
+#: mysite/settings.py:137
 msgid "English"
-msgstr ""
+msgstr "Английский"
 
-#: mysite/settings.py:134
+#: mysite/settings.py:138
 msgid "Russian"
 msgstr "Русскый"
-
-#: mysite/settings.py:135
-msgid "Armenian"
-msgstr "Армянскый"

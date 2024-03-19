@@ -57,7 +57,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    'django.middleware.locale.LocalMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 
     # 'requestdataapp.middlewares.set_useragent_on_request_middleware',
     # 'requestdataapp.middlewares.CountRequestsMiddleware',
@@ -136,7 +136,6 @@ LOCALE_PATHS = [
 LANGUAGES = [
     ('en', _('English')),
     ('ru', _('Russian')),
-    ('am', _('Armenian')),
 ]
 
 # Static files (CSS, JavaScript, Images)
