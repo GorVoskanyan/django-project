@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-19 12:18+0000\n"
+"POT-Creation-Date: 2024-03-19 12:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,3 +40,38 @@ msgstr "Английский"
 #: mysite/settings.py:138
 msgid "Russian"
 msgstr "Русскый"
+
+#: shop/templates/shop/products.html:6
+msgid "Products list"
+msgstr "Список товаров"
+
+#: shop/templates/shop/products.html:10
+msgid "Products"
+msgstr "Товары"
+
+#: shop/templates/shop/products.html:16
+msgctxt "product name"
+msgid "Name"
+msgstr "Название"
+
+#: shop/templates/shop/products.html:17
+msgid "Price"
+msgstr "Цена"
+
+#: shop/templates/shop/products.html:18
+msgid "no discount"
+msgstr "Нет скидки"
+
+#: shop/templates/shop/products.html:19
+#, fuzzy
+#| msgid "no discount"
+msgid "Discount"
+msgstr "Скидка"
+
+#: shop/templates/shop/products.html:30
+msgid "No products yet"
+msgstr "Пока нет товаров"
+
+#: shop/templates/shop/products.html:35
+msgid "Create a new product"
+msgstr "Создать товар"
