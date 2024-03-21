@@ -45,7 +45,9 @@ INSTALLED_APPS = [
 
     'shop.apps.ShopConfig',
     'requestdataapp.apps.RequestdataappConfig',
-    'myauth.apps.MyauthConfig'
+    'myauth.apps.MyauthConfig',
+    'myapiapp.apps.MyapiappConfig',
+    
 ]
 
 MIDDLEWARE = [
@@ -141,7 +143,7 @@ LOCALE_PATHS = [
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR/'static'
+STATIC_ROOT = BASE_DIR / 'static'
 
 
 MEDIA_URL = 'media/'
@@ -156,3 +158,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = reverse_lazy("myauth:about-me")
 LOGIN_URL = reverse_lazy("myauth:login")
+
+REST_FRAMEWORK = {
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 10,
+}
+

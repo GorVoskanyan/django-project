@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-19 18:29+0400\n"
+"POT-Creation-Date: 2024-03-21 18:47+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,65 +29,64 @@ msgid_plural "{count} products"
 msgstr[0] "{count} ապրանք"
 msgstr[1] "{count} ապրանքներ"
 
-#: .\mysite\settings.py:131
+#: .\mysite\settings.py:133
 msgid "Armenian"
 msgstr "Հայերեն"
 
-#: .\mysite\settings.py:132
+#: .\mysite\settings.py:134
 msgid "Russia"
 msgstr "Ռուսերեն"
 
-#: .\mysite\settings.py:133
+#: .\mysite\settings.py:135
 msgid "English"
 msgstr "Անգլերեն"
 
-#: .\shop\templates\shop\products.html:6
+#: .\shop\templates\shop\products.html:7
 msgid "Products list"
 msgstr "Ապրանքների ցանկ"
 
-#: .\shop\templates\shop\products.html:10
+#: .\shop\templates\shop\products.html:11
 msgid "Products"
 msgstr "Առկա ապրանքներ"
 
-#: .\shop\templates\shop\products.html:12
-#, python-brace-format
+#: .\shop\templates\shop\products.html:14
 msgid ""
 "\n"
-"    There is only one product\n"
-"    "
+"            There is only one product.\n"
+"            "
 msgid_plural ""
 "\n"
-"    There are {products_count} products. \n"
-"    "
+"            There are %(products_count)s products. \n"
+"        "
 msgstr[0] ""
 "\n"
-"    Հասանելի է {products_count} ապրանք \n"
-"    "
+"            Հասանելի է %(products_count)s ապրանք \n"
+"        "
 msgstr[1] ""
 "\n"
-"    Հասանելի է {products_count} ապրանքներ \n"
-"    "
+"            Հասանելի է %(products_count)s ապրանք \n"
+"        "
 
-#: .\shop\templates\shop\products.html:21
+#: .\shop\templates\shop\products.html:24
 msgid "Name"
 msgstr "Ապրանքի անունը"
 
-#: .\shop\templates\shop\products.html:22
+#: .\shop\templates\shop\products.html:25
 msgid "Price"
 msgstr "Ապրանքի գինը"
 
-#: .\shop\templates\shop\products.html:23
+#: .\shop\templates\shop\products.html:26
 msgid "no discount"
 msgstr "Զեղչ չկա"
 
-#: .\shop\templates\shop\products.html:24
+#: .\shop\templates\shop\products.html:27
 msgid "Discount"
 msgstr "Զեղչ"
 
-#: .\shop\templates\shop\products.html:35
+#: .\shop\templates\shop\products.html:38
 msgid "No products yet"
 msgstr "Դեռևս ապրանքներ չկան"
 
-#: .\shop\templates\shop\products.html:40
+#: .\shop\templates\shop\products.html:43
 msgid "Create a new product"
 msgstr "Ստեղծել նոր ապրանք"

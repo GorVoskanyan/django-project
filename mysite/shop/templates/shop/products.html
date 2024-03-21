@@ -10,11 +10,13 @@
 {% block body %}
     <h1>{% translate 'Products' %}:</h1>
     {% if products %}
-    {% blocktranslate count products_count=products|length %}
-    There is only one product
-    {% plural %}
-    There are {products_count} products. 
-    {% endblocktranslate %}
+        <div>
+        {% blocktranslate count products_count=products|length %}
+            There is only one product.
+            {% plural %}
+            There are {{ products_count }} products. 
+        {% endblocktranslate %}
+        </div>
     <div>
         {% for product in products %}
             <div>

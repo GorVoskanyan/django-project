@@ -1,15 +1,15 @@
-*{
-    box-sizing: border-box;
+* {
+    box-sizing:border-box;
     margin: 0;
     padding: 0;
 }
 
-form{
-    border: 1px solid red;
-    height: 400px;
+form {
+    border: 1px solid black;
+    height: 600px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     
     
 }
