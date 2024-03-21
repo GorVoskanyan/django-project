@@ -6,11 +6,15 @@
 
 {% block body %}
     <h1>Register</h1>
-    <form method='post'>
+    <form id="barev" class="kikos" method='post'>
     {% csrf_token %}
     {{ form.as_p }}
-        <input type="submit" value="Register">
+        <input type="text">
+        <input class="submitButton" type="submit" value="Register">
     </form>
+    <!-- <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">@</span>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+    </div> -->
 {% endblock %}
-
 

@@ -45,7 +45,9 @@ INSTALLED_APPS = [
 
     'shop.apps.ShopConfig',
     'requestdataapp.apps.RequestdataappConfig',
-    'myauth.apps.MyauthConfig'
+    'myauth.apps.MyauthConfig',
+    'myapiapp.apps.MyapiappConfig',
+    
 ]
 
 MIDDLEWARE = [
@@ -56,13 +58,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
+    
     'django.middleware.locale.LocaleMiddleware',
 
-    # 'requestdataapp.middlewares.set_useragent_on_request_middleware',
-    # 'requestdataapp.middlewares.CountRequestsMiddleware',
-
-
+    'requestdataapp.middlewares.set_useragent_on_request_middleware',
+    'requestdataapp.middlewares.CountRequestsMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -129,23 +129,26 @@ USE_TZ = True
 
 USE_L10N = True
 
+LANGUAGES = (
+    ('hy', _('Armenian')),
+    ('ru', _('Russia')),
+    ('en', _('English')),
+)
+
 LOCALE_PATHS = [
     BASE_DIR / 'locale/'
-]
-
-LANGUAGES = [
-    ('en', _('English')),
-    ('ru', _('Russian')),
 ]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'static'
 
 
-MEDIA_URL = '/media/'
+MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'uploads'
+
 
 
 # Default primary key field type
@@ -155,3 +158,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = reverse_lazy("myauth:about-me")
 LOGIN_URL = reverse_lazy("myauth:login")
+
+REST_FRAMEWORK = {
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 10,
+}
+

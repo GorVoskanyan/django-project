@@ -1,0 +1,18 @@
+{% extends 'myauth/base.html' %}
+
+{% block body %}
+
+<form method="post" enctype="multipart/form-data">
+    <h1>Change Public Info</h1>
+    <hr>
+    {% csrf_token %}
+    {{ form.as_p }}
+    {{ form_av.as_p }}
+
+    <button type="submit">Save Changes</button>
+    <div>
+        <a href="{% url 'myauth:about-me' %}">Bact to Your Page</a>
+    </div>
+</form>
+
+{% endblock %}

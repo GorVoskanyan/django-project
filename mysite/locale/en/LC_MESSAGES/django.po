@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-19 13:12+0000\n"
+"POT-Creation-Date: 2024-03-21 18:47+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,37 +18,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: myauth/views.py:16
+#: .\myauth\views.py:17
 msgid "welcome hello world"
 msgstr "Hello world!"
 
-#: myauth/views.py:23
+#: .\myauth\views.py:24
 #, python-brace-format
 msgid "one product"
 msgid_plural "{count} products"
-msgstr[0] "One product"
-msgstr[1] "{count} products"
+msgstr[0] ""
+msgstr[1] ""
 
-#: mysite/settings.py:137
+#: .\mysite\settings.py:133
+msgid "Armenian"
+msgstr ""
+
+#: .\mysite\settings.py:134
+msgid "Russia"
+msgstr ""
+
+#: .\mysite\settings.py:135
 msgid "English"
 msgstr ""
 
-#: mysite/settings.py:138
-msgid "Russian"
-msgstr ""
-
-#: shop/templates/shop/products.html:6
+#: .\shop\templates\shop\products.html:7
 msgid "Products list"
 msgstr ""
 
-#: shop/templates/shop/products.html:10
-#, fuzzy
-#| msgid "one product"
-#| msgid_plural "{count} products"
+#: .\shop\templates\shop\products.html:11
 msgid "Products"
-msgstr "One product"
+msgstr ""
 
-#: shop/templates/shop/products.html:13
+#: .\shop\templates\shop\products.html:14
 #, python-format
 msgid ""
 "\n"
@@ -56,47 +57,31 @@ msgid ""
 "            "
 msgid_plural ""
 "\n"
-"            There are %(products_count)s products.\n"
+"            There are %(products_count)s products. \n"
 "        "
 msgstr[0] ""
 msgstr[1] ""
 
-#: shop/templates/shop/products.html:23
-msgctxt "product name"
+#: .\shop\templates\shop\products.html:24
 msgid "Name"
 msgstr ""
 
-#: shop/templates/shop/products.html:24
+#: .\shop\templates\shop\products.html:25
 msgid "Price"
 msgstr ""
 
-#: shop/templates/shop/products.html:25
+#: .\shop\templates\shop\products.html:26
 msgid "no discount"
 msgstr ""
 
-#: shop/templates/shop/products.html:26
+#: .\shop\templates\shop\products.html:27
 msgid "Discount"
 msgstr ""
 
-#: shop/templates/shop/products.html:39
-#, fuzzy
-#| msgid "one product"
-#| msgid_plural "{count} products"
-msgid "Create a new product"
-msgstr "One product"
-
-#: shop/templates/shop/products.html:44
-#, python-format
-msgid ""
-"\n"
-"            <h3>No products yet</h3>\n"
-"            <a href=\"%(url create_product_url)s\"\n"
-"            >Create a new one</a>\n"
-"        "
+#: .\shop\templates\shop\products.html:38
+msgid "No products yet"
 msgstr ""
 
-#, fuzzy
-#~| msgid "one product"
-#~| msgid_plural "{count} products"
-#~ msgid "No products yet"
-#~ msgstr "One product"
+#: .\shop\templates\shop\products.html:43
+msgid "Create a new product"
+msgstr ""

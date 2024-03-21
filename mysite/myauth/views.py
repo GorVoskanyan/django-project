@@ -9,8 +9,30 @@ from django.views import View
 from django.views.generic import TemplateView, CreateView
 from django.utils.translation import gettext_lazy as _, ngettext
 
-from .models import Profile
+from django.utils.translation import gettext_lazy as _, ngettext
 
+from .models import Profile
+from .forms import EditProfileForm, AvatarForm 
+
+class HelloView(View):
+    welcome_message = _('welcome hello world')
+    def get(self, request: HttpRequest) -> HttpResponse:
+        
+        items_str = request.GET.get('items') or 0
+        items = int(items_str)
+        
+        products_line = ngettext(
+            "one product",
+            "{count} products",
+            items,
+        )
+        
+        products_line = products_line.format(count=items)
+        
+        return HttpResponse(
+            f'<h1>{self.welcome_message}</h1>'
+            f'\n<h2>{products_line}</h2>'
+            )
 
 class HelloView(View):
     welcome_message = _("welcome hello world")
@@ -105,3 +127,30 @@ def get_session_view(request: HttpRequest) -> HttpResponse:
 class FooBarView(View):
     def get(self, request: HttpRequest) -> JsonResponse:
         return JsonResponse({"foo": "bar", "spam": "eggs"})
+    
+@login_required
+def edit_profile(request: HttpRequest) -> HttpResponse:
+    if request.method == 'POST':
+        form = EditProfileForm(request.POST, instance=request.user)
+        profile, created = Profile.objects.get_or_create(
+            user=request.user
+        )
+        form_av = AvatarForm(request.POST, request.FILES, instance=profile)
+        
+        if form.is_valid() and form_av.is_valid():
+            form.save()
+            form_av.save()
+            
+            return redirect('myauth:about-me')
+    else:
+        form = EditProfileForm(instance=request.user)
+        profile, created = Profile.objects.get_or_create(
+            user=request.user
+        )
+        form_av = AvatarForm(instance=profile)
+        
+    context = {
+        "form": form,
+        "form_av": form_av,
+    }
+    return render(request, 'myauth/edit-profile.html', context=context)
