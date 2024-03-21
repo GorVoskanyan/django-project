@@ -14,6 +14,8 @@ from pathlib import Path
 
 from django.urls import reverse_lazy
 
+from django.utils.translation import gettext_lazy as _
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -57,8 +59,8 @@ MIDDLEWARE = [
     
     'django.middleware.locale.LocaleMiddleware',
 
-    # 'requestdataapp.middlewares.set_useragent_on_request_middleware',
-    # 'requestdataapp.middlewares.CountRequestsMiddleware',
+    'requestdataapp.middlewares.set_useragent_on_request_middleware',
+    'requestdataapp.middlewares.CountRequestsMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -125,18 +127,11 @@ USE_TZ = True
 
 USE_L10N = True
 
-
-gettext = lambda s: s
-
 LANGUAGES = (
-    ('hy', gettext('Armenian')),
-    ('ru', gettext('Russia')),
-    ('en', gettext('English')),
+    ('hy', _('Armenian')),
+    ('ru', _('Russia')),
+    ('en', _('English')),
 )
-
-# MODELTRANSLATION_TRANSLATION_FILES = (
-#     'main.translation',
-# )
 
 LOCALE_PATHS = [
     BASE_DIR / 'locale/'
@@ -146,10 +141,12 @@ LOCALE_PATHS = [
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR/'static'
 
 
-MEDIA_URL = '/media/'
+MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'uploads'
+
 
 
 # Default primary key field type

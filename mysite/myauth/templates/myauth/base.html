@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +9,7 @@
             Auth
         {% endblock %}
     </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     {% block body %}

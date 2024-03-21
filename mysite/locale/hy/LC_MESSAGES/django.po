@@ -20,34 +20,34 @@ msgstr ""
 
 #: .\myauth\views.py:17
 msgid "welcome hello world"
-msgstr "Hello world!"
+msgstr "Բարև աշխարհ"
 
 #: .\myauth\views.py:24
 #, python-brace-format
 msgid "one product"
 msgid_plural "{count} products"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{count} ապրանք"
+msgstr[1] "{count} ապրանքներ"
 
 #: .\mysite\settings.py:131
 msgid "Armenian"
-msgstr ""
+msgstr "Հայերեն"
 
 #: .\mysite\settings.py:132
 msgid "Russia"
-msgstr ""
+msgstr "Ռուսերեն"
 
 #: .\mysite\settings.py:133
 msgid "English"
-msgstr ""
+msgstr "Անգլերեն"
 
 #: .\shop\templates\shop\products.html:6
 msgid "Products list"
-msgstr ""
+msgstr "Ապրանքների ցանկ"
 
 #: .\shop\templates\shop\products.html:10
 msgid "Products"
-msgstr ""
+msgstr "Առկա ապրանքներ"
 
 #: .\shop\templates\shop\products.html:12
 #, python-brace-format
@@ -60,28 +60,34 @@ msgid_plural ""
 "    There are {products_count} products. \n"
 "    "
 msgstr[0] ""
+"\n"
+"    Հասանելի է {products_count} ապրանք \n"
+"    "
 msgstr[1] ""
+"\n"
+"    Հասանելի է {products_count} ապրանքներ \n"
+"    "
 
 #: .\shop\templates\shop\products.html:21
 msgid "Name"
-msgstr ""
+msgstr "Ապրանքի անունը"
 
 #: .\shop\templates\shop\products.html:22
 msgid "Price"
-msgstr ""
+msgstr "Ապրանքի գինը"
 
 #: .\shop\templates\shop\products.html:23
 msgid "no discount"
-msgstr ""
+msgstr "Զեղչ չկա"
 
 #: .\shop\templates\shop\products.html:24
 msgid "Discount"
-msgstr ""
+msgstr "Զեղչ"
 
 #: .\shop\templates\shop\products.html:35
 msgid "No products yet"
-msgstr ""
+msgstr "Դեռևս ապրանքներ չկան"
 
 #: .\shop\templates\shop\products.html:40
 msgid "Create a new product"
-msgstr ""
+msgstr "Ստեղծել նոր ապրանք"
