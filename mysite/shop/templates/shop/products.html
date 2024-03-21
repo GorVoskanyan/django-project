@@ -22,7 +22,7 @@
                 <p><a href="{% url 'shop:product_details' pk=product.pk %}"
                 >{% translate 'Name' context 'product name' %}: {{ product.name }}</a></p>
                 <p>{% translate 'Price' %}: {{ product.price }}</p>
-                {% translate 'no discount' as no_discount %}
+                    {% translate 'no discount' as no_discount %}
                 <p>{% translate 'Discount' %}: {% firstof product.discount no_discount %}</p>
 
                 {% if product.preview %}
