@@ -46,7 +46,9 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'requestdataapp.apps.RequestdataappConfig',
     'myauth.apps.MyauthConfig',
+
     'myapiapp.apps.MyapiappConfig',
+    'rest_framework',
     
 ]
 

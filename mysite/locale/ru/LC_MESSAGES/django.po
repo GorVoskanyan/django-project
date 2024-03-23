@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 18:47+0400\n"
+"POT-Creation-Date: 2024-03-21 18:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,15 +16,15 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
-"%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\myauth\views.py:17
+#: myauth/views.py:18 myauth/views.py:38
 msgid "welcome hello world"
 msgstr "Привет мир!"
 
-#: .\myauth\views.py:24
+#: myauth/views.py:25 myauth/views.py:45
 #, python-brace-format
 msgid "one product"
 msgid_plural "{count} products"
@@ -33,27 +33,32 @@ msgstr[1] "{count} товара"
 msgstr[2] "{count} товаров"
 msgstr[3] ""
 
-#: .\mysite\settings.py:133
+#: mysite/settings.py:133
 msgid "Armenian"
 msgstr "Армянский"
 
-#: .\mysite\settings.py:134
+#: mysite/settings.py:134
 msgid "Russia"
 msgstr "Русскый"
 
-#: .\mysite\settings.py:135
+#: mysite/settings.py:135
 msgid "English"
 msgstr "Англиисский"
 
-#: .\shop\templates\shop\products.html:7
+#: shop/templates/shop/base.html:26
+msgid "Today is"
+msgstr "Сегодня"
+
+#: shop/templates/shop/products.html:7
 msgid "Products list"
 msgstr "Список товаров"
 
-#: .\shop\templates\shop\products.html:11
+#: shop/templates/shop/products.html:11
 msgid "Products"
 msgstr "Товары"
 
-#: .\shop\templates\shop\products.html:14
+#: shop/templates/shop/products.html:14
+#, python-format
 msgid ""
 "\n"
 "            There is only one product.\n"
@@ -75,26 +80,37 @@ msgstr[2] ""
 "            Доступно %(products_count)s товаров \n"
 "        "
 
-#: .\shop\templates\shop\products.html:24
+#: shop/templates/shop/products.html:24
 msgid "Name"
 msgstr "Название"
 
-#: .\shop\templates\shop\products.html:25
+#: shop/templates/shop/products.html:25
 msgid "Price"
 msgstr "Цена"
 
-#: .\shop\templates\shop\products.html:26
+#: shop/templates/shop/products.html:26
 msgid "no discount"
 msgstr "Нет скидкы"
 
-#: .\shop\templates\shop\products.html:27
+#: shop/templates/shop/products.html:27
 msgid "Discount"
 msgstr "Скидка"
 
-#: .\shop\templates\shop\products.html:38
-msgid "No products yet"
-msgstr "Пока нет товаров"
-
-#: .\shop\templates\shop\products.html:43
+#: shop/templates/shop/products.html:40
 msgid "Create a new product"
 msgstr "сСоздать товар"
+
+#: shop/templates/shop/products.html:45
+#, python-format
+msgid ""
+"\n"
+"            <h3>No products yet</h3>\n"
+"            <a href=\"%(create_product_url)s\"\n"
+"            >Create a new one</a>\n"
+"        "
+msgstr ""
+"\n"
+"            <h3>Пока нет товаров</h3>\n"
+"            <a href=\"%(create_product_url)s\"\n"
+"            >Создать новый товар</a>\n"
+"        "

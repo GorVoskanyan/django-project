@@ -14,6 +14,7 @@ from django.utils.translation import gettext_lazy as _, ngettext
 from .models import Profile
 from .forms import EditProfileForm, AvatarForm 
 
+
 class HelloView(View):
     welcome_message = _('welcome hello world')
     def get(self, request: HttpRequest) -> HttpResponse:
@@ -33,6 +34,7 @@ class HelloView(View):
             f'<h1>{self.welcome_message}</h1>'
             f'\n<h2>{products_line}</h2>'
             )
+
 
 class HelloView(View):
     welcome_message = _("welcome hello world")
@@ -127,7 +129,8 @@ def get_session_view(request: HttpRequest) -> HttpResponse:
 class FooBarView(View):
     def get(self, request: HttpRequest) -> JsonResponse:
         return JsonResponse({"foo": "bar", "spam": "eggs"})
-    
+
+
 @login_required
 def edit_profile(request: HttpRequest) -> HttpResponse:
     if request.method == 'POST':
