@@ -9,6 +9,7 @@ from django.views import View
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.filters import SearchFilter
 
 from .forms import ProductForm, GroupForm
 from .models import Product, Order, ProductImage
@@ -17,6 +18,10 @@ from .serializers import ProductSerializer
 class ProductViewSet(ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+    filter_backends = [
+        SearchFilter,
+    ]
+    search_fields = ["name", "description",]
     filterset_fields = [
         "name",
         "description",
