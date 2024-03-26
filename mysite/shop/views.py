@@ -17,7 +17,13 @@ from .serializers import ProductSerializer
 class ProductViewSet(ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-
+    filterset_fields = [
+        "name",
+        "description",
+        "price",
+        "discount",
+        "archived"
+    ]
 
 class ShopIndexView(View):
     def get(self, request: HttpRequest) -> HttpResponse:
