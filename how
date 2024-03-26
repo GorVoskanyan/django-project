@@ -1,0 +1,501 @@
+[33mcommit 809c772d5992848ea9d7dda253a89cba648a6c44[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Tue Mar 26 21:19:56 2024 +0400
+
+    added routers for api urls
+
+[33mcommit 52463e901cea30d00e966193d3e340b017862d59[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Tue Mar 26 21:15:02 2024 +0400
+
+    added serializer for shop and ModelViewSet from REST
+
+[33mcommit 81f1daa5f6d28ff8823a98d110d90c8fdb3d30c0[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Sat Mar 23 16:45:25 2024 +0400
+
+    added Generic
+
+[33mcommit 68b1a83accf72e4cb3bf22103fcc67aeedae4193[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Sat Mar 23 16:42:10 2024 +0400
+
+    added serializer
+
+[33mcommit a8ef38ce9345f7513a420455cf44928502eaf76f[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Sat Mar 23 16:33:07 2024 +0400
+
+    added hello view REST
+
+[33mcommit 8cd407db4c3c8322c7edb7434e7b9f340593a42f[m
+Merge: c5f84f4 5bba520
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Mar 21 22:10:22 2024 +0400
+
+    Merge remote-tracking branch 'origin/main'
+    
+    # Conflicts:
+    #       mysite/locale/en/LC_MESSAGES/django.po
+    #       mysite/locale/ru/LC_MESSAGES/django.po
+    #       mysite/myauth/urls.py
+    #       mysite/mysite/settings.py
+    #       mysite/mysite/urls.py
+    #       mysite/shop/templates/shop/products.html
+
+[33mcommit c5f84f485939f5b89b22a52c885d244f02da928c[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Mar 21 22:07:40 2024 +0400
+
+    added pluralization
+
+[33mcommit 5bba520c58592038bef9da5970c3247a0aa564ff[m
+Author: GorVoskanyan <voskanyangor26@gmail.com>
+Date:   Thu Mar 21 18:56:02 2024 +0400
+
+    fixed bug translation added DRF
+
+[33mcommit 322dc930dd2761fe9e76d3fd38e102072d15d163[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Mar 21 15:54:26 2024 +0400
+
+    has bug in translations
+
+[33mcommit 130de2bf7ec3eda92cb6fff7e764aec8e158477b[m
+Author: GorVoskanyan <voskanyangor26@gmail.com>
+Date:   Thu Mar 21 15:49:13 2024 +0400
+
+    added translation and loaded static files
+
+[33mcommit 3df3484010a6a51674423e607b43010d65b1ad76[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Tue Mar 19 17:16:38 2024 +0400
+
+    added translationblocks
+
+[33mcommit 4badfd077ee983c1c95de595bedb2d73c64facef[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Tue Mar 19 16:55:32 2024 +0400
+
+    added translate for cherry
+
+[33mcommit 10c4119c2bcc26c3aeb6b00e553e2db041af0758[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Tue Mar 19 16:53:04 2024 +0400
+
+    tag pluralize
+
+[33mcommit 0891b335a26eff921d5f6cce6086134081e33da4[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Tue Mar 19 16:51:02 2024 +0400
+
+    added translations in template
+
+[33mcommit 210a1ed2d078f23bcc18790affeb10ed59e1f1b1[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Tue Mar 19 16:27:03 2024 +0400
+
+    added translation for russian pluralization
+
+[33mcommit 7d7b87ae0c9565e6b3b4140bb200b309e7968608[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Tue Mar 19 16:22:01 2024 +0400
+
+    ngettext for pluralization
+
+[33mcommit ed5be4845c988a846db6208bf99c49d5ce7857b8[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Tue Mar 19 15:43:48 2024 +0400
+
+    add translations en ru
+
+[33mcommit 0e8f40d8e5d425f3d60f18003a2a5e35b0527772[m
+Author: GorVoskanyan <voskanyangor26@gmail.com>
+Date:   Sat Mar 16 18:31:53 2024 +0400
+
+    added images
+
+[33mcommit 046bd70b319e25ea201af55c04273da7ec9f3b5f[m
+Author: GorVoskanyan <voskanyangor26@gmail.com>
+Date:   Sat Mar 16 18:18:34 2024 +0400
+
+    added image field for user and edit profile
+
+[33mcommit a83f5dc8489c8dbec45ef6754262aceb944f18ab[m
+Author: GorVoskanyan <voskanyangor26@gmail.com>
+Date:   Sat Mar 16 17:28:14 2024 +0400
+
+    fixed bug images
+
+[33mcommit b6f893e933fe3e6eab193d5cc27b97351447e094[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Sat Mar 16 15:21:28 2024 +0400
+
+    change settings
+
+[33mcommit cf3bbcb684a46fd4b41c8a87f91f7ec66f4b9325[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Mar 14 15:13:05 2024 +0400
+
+    added i18patterns
+
+[33mcommit 01ab7d03095ecabb880a02703b1684b83a144be5[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Mar 14 15:10:53 2024 +0400
+
+    changed settings
+
+[33mcommit 1a9af96004c5383cf3974c3b4822d7a2e73fb5e9[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Mar 14 15:07:40 2024 +0400
+
+    added gettext for translation use makemessages -l ru and compilemessages
+
+[33mcommit 9c6eb500c1582583ea4f1f68b099c3f2b18b4cfc[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Mar 14 14:59:27 2024 +0400
+
+    added simple view
+
+[33mcommit 04a72eda4e528d23951f6494c6eb92d32575c6e5[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Mar 14 14:54:13 2024 +0400
+
+    changed settings for internationalization and localization
+
+[33mcommit baaac0aa446190ebdb8d7c866bf705506b14c526[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Mar 14 14:46:35 2024 +0400
+
+    added multiple files upload but has bugs
+
+[33mcommit fba07e5da37440f1b4ae9f992b3095f12f5e86a1[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Wed Mar 13 22:35:36 2024 +0400
+
+    fixed bug for preview
+
+[33mcommit 0cc727ac0c1951f327bd2dda8baffa55f253ed11[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Tue Mar 12 15:37:30 2024 +0400
+
+    added form for upload images at once
+
+[33mcommit da43e2366f7954843475439f016e8928dcdf158c[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Tue Mar 12 15:21:47 2024 +0400
+
+    added images for product
+
+[33mcommit daf041775da6a4ce1952d183abcce3edca2e72f1[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Tue Mar 12 15:07:25 2024 +0400
+
+    added model for images
+
+[33mcommit b328a43f36b233476eb682c9d8e7f8eb28a4e70c[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Tue Mar 12 14:47:43 2024 +0400
+
+    has bug can't open image
+
+[33mcommit 14f578c12fa1b286a8b16effe6c786c056fc52ba[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Tue Mar 12 14:38:10 2024 +0400
+
+    changed forms product form and product update added encrypt type
+
+[33mcommit 6b83ab0f0930053535a915f9301340c94f5e71fd[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Tue Mar 12 14:34:56 2024 +0400
+
+    changed view for product preview
+
+[33mcommit 9c7b65824cbb01167627e3dcff992357ae197174[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Tue Mar 12 14:24:31 2024 +0400
+
+    updated requirments.txt added pillow updated url patterns for STATIC files
+
+[33mcommit fba5a320d60457633361657d8b49622740ad2f56[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Tue Mar 12 14:08:16 2024 +0400
+
+    changed settings for media
+
+[33mcommit b79ef9405b88d0ef0490c5e4b6d4327323d743f8[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Sat Mar 9 23:47:54 2024 +0400
+
+    added TODO sor students TTD only
+
+[33mcommit 062f58e70be5aea78845213592ccd68a950c3502[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Sat Mar 9 23:30:38 2024 +0400
+
+    added TODO for students class OrderDetailViewTestCase
+
+[33mcommit 147047f2b6046c999ac1f121a4178132e3406680[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Sat Mar 9 23:26:34 2024 +0400
+
+    fixed bugs and added Todos for testing type python3 manage.py test shop.tests -> Run 8 tests ok
+
+[33mcommit 506c765131e8040e787d3bc658bb436f1ba32267[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Sat Mar 9 13:29:55 2024 +0400
+
+    added logic for TDD test
+
+[33mcommit d9697dd420ff52ca1c264aa34e60c1df95f40b34[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Sat Mar 9 13:20:38 2024 +0400
+
+    added TDD test
+
+[33mcommit 5f4c05e05f4fb75f0ac9ee587b72da50d026a7de[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Sat Mar 9 13:10:19 2024 +0400
+
+    added fixtures and login tests
+
+[33mcommit 771bbbe5fb78193507af24e0d1127bf308143fc0[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Sat Mar 9 12:36:50 2024 +0400
+
+    add tests
+
+[33mcommit f23e6bfe64f0e1a24d53ba2c6f729e7a323b69dd[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Mar 7 03:35:21 2024 +0400
+
+    only admin can  create product
+
+[33mcommit e9f68608ac4d49336306ae6d1532ce05384117f7[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Mar 7 03:29:42 2024 +0400
+
+    added authorization for session set
+
+[33mcommit 1195d5b2a3ab40dda7365b073cbb79957ff7aa84[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Mar 7 03:20:54 2024 +0400
+
+    added authorization for for order details
+
+[33mcommit cd4d184e4db12468a3397930d7bf637778883485[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Mar 7 02:48:57 2024 +0400
+
+    made so that without a login I can’t view orders
+
+[33mcommit e624817127f1dc5357d972da678bd497d44aa1be[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Mar 7 02:41:28 2024 +0400
+
+    added command for bind user
+
+[33mcommit 156ff8233fdb3e7381cc2257ce88dff8bb712569[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Mar 7 02:22:16 2024 +0400
+
+    added profile for user changed views
+
+[33mcommit 2ca4d7e2db90c4ba15c3eeff98f31b149a82c8a0[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Mar 7 02:16:37 2024 +0400
+
+    added model Profile
+
+[33mcommit de39cc7e65212f7930ce9430868085a20286cb74[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Mar 7 02:03:37 2024 +0400
+
+    added register
+
+[33mcommit cd60117061858af6ef35ba60bf360a2d26a819d9[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Mar 7 01:25:17 2024 +0400
+
+    added about-me
+
+[33mcommit 6654dbc81fd94c10bc11d7f3969efa4a45522a88[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Mar 7 01:08:34 2024 +0400
+
+    fixed bug logout
+
+[33mcommit 28fc98362f09b7e1304eaee61670f55f267fcad0[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Tue Mar 5 15:22:43 2024 +0400
+
+    added logout
+
+[33mcommit fc45840130900202db03d7dee64f558851a78e9b[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Tue Mar 5 14:14:46 2024 +0400
+
+    added cookies and sessions
+
+[33mcommit 7f4a0d60269af6b2a74054798d89297c4923babc[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Sat Mar 2 16:24:40 2024 +0400
+
+    added myauth app
+
+[33mcommit 14f925c0f591f14ef6dfc5caccb623c2fdede314[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Sat Mar 2 02:52:28 2024 +0400
+
+    added ProductDelete(Archived)View
+
+[33mcommit 61a7d017ce49c904d96237644eeead81a15e30c5[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Sat Mar 2 02:26:27 2024 +0400
+
+    added ProductUpdateView
+
+[33mcommit 6e17095f9b97e495ed881149dee39360c8abe757[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Sat Mar 2 02:06:09 2024 +0400
+
+    added ProductCreateView
+
+[33mcommit fc7a5662851bfabfe48118a6449fdaff0fdac820[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Sat Mar 2 01:36:30 2024 +0400
+
+    added OrderListView, OrderDetailView and templates
+
+[33mcommit 79f3c918b49661d9f9b9526753c005d0a26f46f9[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Fri Mar 1 23:52:03 2024 +0400
+
+    added DetailView
+
+[33mcommit 567d609a67f31afa641b943613b560146e594e91[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Fri Mar 1 23:47:16 2024 +0400
+
+    added ListView
+
+[33mcommit 30c283685fedab67e9ef10cb034eaf8b3b87269d[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Fri Mar 1 23:41:32 2024 +0400
+
+    added TemplateView
+
+[33mcommit a79fad1aeadfa226419c9b7e8bf5fbb4f54081ec[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Fri Mar 1 23:32:33 2024 +0400
+
+    added get_object_or_404
+
+[33mcommit 26cb0b27528ea81a1209848d2d94ea1652a575f2[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Feb 29 18:39:43 2024 +0400
+
+    added ProductDetailsView
+
+[33mcommit 64b111f22b6550718d90384dd01d73010ecf2817[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Feb 29 18:09:42 2024 +0400
+
+    added Class Based Views
+
+[33mcommit 54afd8dd4644b5e5142bb2c14b050bd54d176581[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Feb 29 02:02:50 2024 +0400
+
+    added OrderForm
+
+[33mcommit c50125414de3b800728eefcdbe5c163023a9f3e0[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Feb 29 01:39:38 2024 +0400
+
+    added ModelForm
+
+[33mcommit ca52c1cd9bdb2d3be8bc8c95f46944172e9f00ee[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Feb 29 01:23:54 2024 +0400
+
+    added validator
+
+[33mcommit e74650bed048ec987dcc4036124aa67b81df0b69[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Feb 29 01:12:36 2024 +0400
+
+    created UploadFileForm, changed view and file-upload.html
+
+[33mcommit 96f4bc9c2ab538f8e2a007799ecd72b24577bfb7[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Feb 29 01:02:43 2024 +0400
+
+    changed ProductForm widget
+
+[33mcommit e7c3a1f2a8ef118579fa331a6d2c4a7268551443[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Sat Feb 24 16:50:32 2024 +0400
+
+    add validator
+
+[33mcommit 2142bb9799943cadfbbf09aa7b5942194bdb0b40[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Sat Feb 24 16:32:47 2024 +0400
+
+    added redirect, reverse
+
+[33mcommit e605630f4e064cc3fd535c5e8862ccbf41b4728f[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Sat Feb 24 16:27:44 2024 +0400
+
+    added links
+
+[33mcommit 83f0d7fcb1027703156c1518353992226ded3e7c[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Sat Feb 24 14:58:30 2024 +0400
+
+    added form UserBioForm
+
+[33mcommit 7ba9313ad1eb5925ce56353e76d46301ef0ab07c[m
+Merge: a1d3f17 035fe80
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Fri Feb 23 12:41:41 2024 +0400
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit a1d3f174831f1d4e68bb1f8045082cb5e8ab9030[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Thu Feb 22 18:32:18 2024 +0400
+
+    added file size limit and requests quantity middlewares
+
+[33mcommit 035fe80aa70e90bf3b4b478f7ac76290591da979[m
+Author: GorVoskanyan <voskanyangor26@gmail.com>
+Date:   Tue Feb 20 18:34:48 2024 +0400
+
+    updated
+
+[33mcommit 87853e2b372bfb7f70c93f542a1bbd9b58b15419[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Sat Feb 17 16:15:24 2024 +0400
+
+    added Middlewares
+
+[33mcommit c85fc5b5faad5ba988c965155468acafd70c5f6d[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Sat Feb 17 15:55:54 2024 +0400
+
+    added forms bio-for, file-upload-form
+
+[33mcommit 94fca6cdd406e858f456768c8370a05d914006a7[m
+Author: Gor Voskanyan <voskanyangor26@gmail.com>
+Date:   Sat Feb 17 15:14:16 2024 +0400
+
+    added requestdataapp
+
+[33mcommit 7c9d57a3c1ec508a23b415f23333b4c5d9e85788[m
+Author: GorVoskanyan <voskanyangor26@gmail.com>
+Date:   Thu Feb 15 17:33:35 2024 +0400
+
+    first commit
