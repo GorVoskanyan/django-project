@@ -10,6 +10,7 @@ from django.views.generic import TemplateView, ListView, DetailView, CreateView,
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.filters import SearchFilter
+from django_filters.rest_framework import DjangoFilterBackend
 
 from .forms import ProductForm, GroupForm
 from .models import Product, Order, ProductImage
@@ -20,6 +21,7 @@ class ProductViewSet(ModelViewSet):
     serializer_class = ProductSerializer
     filter_backends = [
         SearchFilter,
+        DjangoFilterBackend,
     ]
     search_fields = ["name", "description",]
     filterset_fields = [
