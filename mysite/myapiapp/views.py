@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework.request import Request
 # from rest_framework.views import APIView
 
-from rest_framework.generics import GenericAPIView, CreateAPIView
+from rest_framework.generics import GenericAPIView, ListCreateAPIView
 from rest_framework.mixins import ListModelMixin, CreateModelMixin
 
 from .serializers import GroupSerializer
@@ -21,8 +21,14 @@ def hello_world_view(request: Request) -> Response:
 #
 
 
-class GroupListView(ListModelMixin, GenericAPIView):
+# class GroupListView(ListModelMixin, GenericAPIView):
+#     queryset = Group.objects.all()
+#     serializer_class = GroupSerializer
+#     def get(self, request: Request) -> Response:
+#         return self.list(request)
+
+
+
+class GroupListView(ListCreateAPIView):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
-    def get(self, request: Request) -> Response:
-        return self.list(request)
