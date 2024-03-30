@@ -44,8 +44,25 @@ class OrderViewSet(ModelViewSet):
 
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
+    filter_backends = [
+        DjangoFilterBackend,
+        SearchFilter,
+        OrderingFilter
+    ]
+    search_fields = [
+        "delivery_address", 'user'
+    ]
 
+    filterset_fields = [
+        'delivery_address',
+        'promocode',
+        'user'
+    ]
 
+    ordering_fields = [
+        'created_at',
+        'user'
+    ]
 class ShopIndexView(View):
     def get(self, request: HttpRequest) -> HttpResponse:
         products = [
