@@ -1,3 +1,18 @@
+"""
+The views module contains view functions for handling HTTP requests and rendering web pages.
+
+This module includes view functions for various aspects of the web application, such as
+displaying product listings.
+
+Functions:
+    index: Renders the index page of the shop application.
+    product_detail: Renders the detail page for a specific product.
+    process_order: Handles order processing.
+    api_product_list: Returns a JSON response containing a list of products (API endpoint).
+    api_product_detail: Returns a JSON response containing details of a specific product (API endpoint)
+"""
+
+
 from timeit import default_timer
 
 
@@ -11,13 +26,26 @@ from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMix
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.filters import SearchFilter, OrderingFilter
 from django_filters.rest_framework import DjangoFilterBackend
-
+from drf_spectacular.utils import extend_schema, OpenApiResponse
 from .forms import ProductForm, GroupForm
 from .models import Product, Order, ProductImage
 from .serializers import ProductSerializer, OrderSerializer
 
 
+# @extend_schema(description='Product CRUD')
 class ProductViewSet(ModelViewSet):
+    """
+    A view set for interacting with the product resource.
+
+    This view set provides CRUD (Create, Retrieve, Update, Delete) operations
+    for the product resource. It supports listing all products, creating a new product,
+    retrieving a specific product by ID, updating an existing product, and deleting a product.
+
+    Attributes:
+        queryset (QuerySet): The queryset representing all products in the database.
+        serializer_class (Serializer): The serializer class used to serialize/deserialize
+            product instances.
+    """
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     filter_backends = [
@@ -38,6 +66,17 @@ class ProductViewSet(ModelViewSet):
         "price",
         "discount",
     ]
+
+    @extend_schema(
+        summary='Get one product by ID',
+        description='Retrieves **product**, returns 404 if not found',
+        responses={
+            200: ProductSerializer,
+            404: OpenApiResponse(description='Empty response, product by id not found'),
+        }
+    )
+    def retrieve(self, *args, **kwargs):
+        return super().retrieve(*args, **kwargs)
 
 
 class OrderViewSet(ModelViewSet):

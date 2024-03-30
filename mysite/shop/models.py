@@ -10,6 +10,18 @@ def product_preview_directory_path(instance: 'Product', filename: str) -> str:
 
 
 class Product(models.Model):
+    """
+    Represents a product in the inventory.
+
+    Attributes:
+        id (int): The unique identifier for the product.
+        name (str): The name of the product.
+        price (float): The price of the product.
+        description (str): A brief description of the product.
+
+
+    Orders here :model:`shop.Order`
+    """
     class Meta:
         ordering = ['name', 'price']
         # db_table = 'tech_product'
