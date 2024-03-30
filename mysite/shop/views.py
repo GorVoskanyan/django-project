@@ -14,7 +14,8 @@ from django_filters.rest_framework import DjangoFilterBackend
 
 from .forms import ProductForm, GroupForm
 from .models import Product, Order, ProductImage
-from .serializers import ProductSerializer
+from .serializers import ProductSerializer, OrderSerializer
+
 
 class ProductViewSet(ModelViewSet):
     queryset = Product.objects.all()
@@ -37,6 +38,13 @@ class ProductViewSet(ModelViewSet):
         "price",
         "discount",
     ]
+
+
+class OrderViewSet(ModelViewSet):
+
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
+
 
 class ShopIndexView(View):
     def get(self, request: HttpRequest) -> HttpResponse:
