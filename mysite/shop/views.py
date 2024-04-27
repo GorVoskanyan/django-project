@@ -12,7 +12,7 @@ Functions:
     api_product_detail: Returns a JSON response containing details of a specific product (API endpoint)
 """
 
-
+import logging
 from timeit import default_timer
 
 
@@ -30,6 +30,9 @@ from drf_spectacular.utils import extend_schema, OpenApiResponse
 from .forms import ProductForm, GroupForm
 from .models import Product, Order, ProductImage
 from .serializers import ProductSerializer, OrderSerializer
+
+
+logger = logging.getLogger(__name__)
 
 
 # @extend_schema(description='Product CRUD')
@@ -114,6 +117,8 @@ class ShopIndexView(View):
             'products': products,
             'items': 1,
         }
+        logger.debug("Products %s" % products)
+        logger.info("Rendering shop index")
         return render(request, 'shop/index.html', context=context)
 
 
@@ -196,6 +201,7 @@ class OrdersListView(LoginRequiredMixin, ListView):
         Order.objects
         .select_related('user')
         .prefetch_related('products')
+        .all()
     )
 
 

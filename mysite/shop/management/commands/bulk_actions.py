@@ -8,13 +8,13 @@ class Command(BaseCommand):
 
         result = Product.objects.filter(
             name__contains='Smartphone'
-        ).update(discount=10)
+        ).update(discount=20)
         print(result)
 
         # info = [
-        #     ('Smartphone 1', 1999),
-        #     ('Smartphone 2', 2999),
-        #     ('Smartphone 3', 3999),
+        #     ('Smartphone 5', 1999),
+        #     ('Smartphone 6', 2999),
+        #     ('Smartphone 7', 3999),
         # ]
         #
         # products = [

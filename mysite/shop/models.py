@@ -27,6 +27,7 @@ class Product(models.Model):
         # db_table = 'tech_product'
         # verbose_name_plural = 'products'
         # verbose_name = _("Product")
+        # app_label = 'mysite'
 
     name = models.CharField(max_length=100, db_index=True)
     description = models.TextField(null=False, blank=True, db_index=True)

@@ -5,8 +5,8 @@ from shop.models import Product, Order
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
-        # self.stdout.write('Start demo aggregate')
-        #
+        self.stdout.write('Start demo aggregate')
+
         # result = Product.objects.filter(
         #     name__contains='Smartphone',
         # ).aggregate(

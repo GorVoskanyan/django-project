@@ -1,0 +1,5 @@
+2024-04-27 11:53:31,602 [WARNING] in django.request: Not Found: /meta.json
+2024-04-27 11:54:14,340 [WARNING] in django.request: Not Found: /meta.json
+2024-04-27 11:54:14,753 [WARNING] in django.request: Not Found: /meta.json
+2024-04-27 11:54:31,789 [WARNING] in django.request: Not Found: /meta.json
+2024-04-27 11:54:33,585 [WARNING] in django.request: Not Found: /meta.json
