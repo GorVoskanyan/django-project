@@ -1,2 +1,120 @@
 2024-04-27 15:48:58,683 [INFO] in django.utils.autoreload: /home/gor/python_course/django-project/mysite/mysite/settings.py changed, reloading.
 2024-04-27 15:48:59,309 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-05-06 20:54:45,603 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-05-06 20:54:50,578 [WARNING] in django.request: Not Found: /
+2024-05-06 20:54:50,600 [DEBUG] in urllib3.connectionpool: Starting new HTTPS connection (1): o4507211428265984.ingest.de.sentry.io:443
+2024-05-06 20:54:51,039 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:54:51,152 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:54:51,228 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:54:51,300 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:54:51,299 [WARNING] in django.request: Not Found: /meta.json
+2024-05-06 20:54:51,370 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:54:51,619 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:54:54,665 [WARNING] in django.request: Not Found: /meta.json
+2024-05-06 20:54:54,722 [WARNING] in django.request: Not Found: /favicon.ico
+2024-05-06 20:54:54,752 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:54:54,827 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:55:23,358 [DEBUG] in shop.views: Products [('Laptop', 1999), ('Desktop', 2999), ('Smartphone', 999)]
+2024-05-06 20:55:23,358 [INFO] in shop.views: Rendering shop index
+2024-05-06 20:55:23,425 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:55:23,503 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:55:23,574 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:55:25,037 [WARNING] in django.request: Not Found: /en/
+2024-05-06 20:55:25,122 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:55:25,286 [WARNING] in django.request: Not Found: /meta.json
+2024-05-06 20:55:25,396 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:55:26,805 [WARNING] in django.request: Not Found: /meta.json
+2024-05-06 20:55:26,884 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:55:31,015 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:55:33,398 [WARNING] in django.request: Not Found: /meta.json
+2024-05-06 20:55:33,494 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:55:44,000 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:55:46,331 [WARNING] in django.request: Not Found: /meta.json
+2024-05-06 20:55:46,428 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:55:48,190 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:55:48,198 [ERROR] in django.request: Internal Server Error: /en/shop/products/export/
+Traceback (most recent call last):
+  File "/home/gor/python_course/django-project/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gor/python_course/django-project/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/gor/python_course/django-project/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/gor/python_course/django-project/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/gor/python_course/django-project/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/gor/python_course/django-project/mysite/shop/views.py", line 230, in get
+    name = elem['naem']
+KeyError: 'naem'
+2024-05-06 20:55:48,420 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:55:50,149 [WARNING] in django.request: Not Found: /meta.json
+2024-05-06 20:55:50,285 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:55:50,736 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:57:23,442 [INFO] in django.utils.autoreload: /home/gor/python_course/django-project/mysite/shop/views.py changed, reloading.
+2024-05-06 20:57:23,523 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:57:24,235 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-05-06 20:58:32,767 [DEBUG] in urllib3.connectionpool: Starting new HTTPS connection (1): o4507211428265984.ingest.de.sentry.io:443
+2024-05-06 20:58:32,991 [WARNING] in django.request: Not Found: /meta.json
+2024-05-06 20:58:33,010 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:58:33,088 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:58:34,723 [WARNING] in django.request: Not Found: /meta.json
+2024-05-06 20:58:34,820 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 20:58:50,616 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211439079504/envelope/ HTTP/1.1" 200 0
+2024-05-06 21:35:25,349 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-05-06 21:35:29,873 [WARNING] in django.request: Not Found: /
+2024-05-06 21:35:31,685 [WARNING] in django.request: Not Found: /meta.json
+2024-05-06 21:35:35,770 [WARNING] in django.request: Not Found: /meta.json
+2024-05-06 21:35:52,577 [WARNING] in django.request: Not Found: /meta.json
+2024-05-06 21:37:00,740 [INFO] in django.utils.autoreload: /home/gor/python_course/django-project/mysite/shop/views.py changed, reloading.
+2024-05-06 21:37:02,729 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-05-06 21:37:10,081 [WARNING] in django.request: Not Found: /meta.json
+2024-05-06 21:37:10,128 [WARNING] in django.request: Not Found: /meta.json
+2024-05-06 21:37:21,218 [INFO] in django.utils.autoreload: /home/gor/python_course/django-project/mysite/shop/views.py changed, reloading.
+2024-05-06 21:37:22,783 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-05-06 21:37:28,608 [ERROR] in django.request: Internal Server Error: /en/shop/products/export/
+Traceback (most recent call last):
+  File "/home/gor/python_course/django-project/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gor/python_course/django-project/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/gor/python_course/django-project/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/gor/python_course/django-project/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/gor/python_course/django-project/mysite/shop/views.py", line 230, in get
+    name = elem['naem']
+KeyError: 'naem'
+2024-05-06 21:37:30,983 [WARNING] in django.request: Not Found: /meta.json
+2024-05-06 21:38:00,227 [INFO] in django.utils.autoreload: /home/gor/python_course/django-project/mysite/mysite/settings.py changed, reloading.
+2024-05-06 21:38:02,734 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-05-06 21:38:16,600 [DEBUG] in urllib3.connectionpool: Starting new HTTPS connection (1): o4507211428265984.ingest.de.sentry.io:443
+2024-05-06 21:38:16,949 [ERROR] in django.request: Internal Server Error: /en/shop/products/export/
+Traceback (most recent call last):
+  File "/home/gor/python_course/django-project/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/gor/python_course/django-project/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/gor/python_course/django-project/venv/lib/python3.10/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "/home/gor/python_course/django-project/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/gor/python_course/django-project/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/gor/python_course/django-project/mysite/shop/views.py", line 230, in get
+    name = elem['naem']
+KeyError: 'naem'
+2024-05-06 21:38:18,789 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211602853968/envelope/ HTTP/1.1" 200 0
+2024-05-06 21:38:18,959 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211602853968/envelope/ HTTP/1.1" 200 0
+2024-05-06 21:38:22,064 [WARNING] in django.request: Not Found: /meta.json
+2024-05-06 21:38:22,478 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211602853968/envelope/ HTTP/1.1" 200 0
+2024-05-06 21:39:17,417 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211602853968/envelope/ HTTP/1.1" 200 0
+2024-05-06 21:40:17,057 [INFO] in django.utils.autoreload: /home/gor/python_course/django-project/mysite/shop/views.py changed, reloading.
+2024-05-06 21:40:19,340 [INFO] in django.utils.autoreload: Watching for file changes with StatReloader
+2024-05-06 21:40:42,277 [DEBUG] in urllib3.connectionpool: Starting new HTTPS connection (1): o4507211428265984.ingest.de.sentry.io:443
+2024-05-06 21:40:43,707 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211602853968/envelope/ HTTP/1.1" 200 0
+2024-05-06 21:40:43,790 [WARNING] in django.request: Not Found: /meta.json
+2024-05-06 21:40:43,982 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211602853968/envelope/ HTTP/1.1" 200 0
+2024-05-06 21:40:45,910 [WARNING] in django.request: Not Found: /meta.json
+2024-05-06 21:40:45,991 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211602853968/envelope/ HTTP/1.1" 200 0
+2024-05-06 21:41:42,407 [DEBUG] in urllib3.connectionpool: https://o4507211428265984.ingest.de.sentry.io:443 "POST /api/4507211602853968/envelope/ HTTP/1.1" 200 0
