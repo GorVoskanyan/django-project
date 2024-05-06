@@ -29,11 +29,22 @@ SECRET_KEY = 'django-insecure-&qb8xw&&^k15+3@44r&k_g#i*6_(lmsg(rkmfqml3n*ngf!t&3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "0.0.0.0",
+    "127.0.0.1",
+]
 INTERNAL_IPS = [
     '127.0.0.1',
 ]
 
+if DEBUG:
+    import socket
+    hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+    INTERNAL_IPS.append("10.0.2.2") # Docker address
+    INTERNAL_IPS.extend(
+        # 192.168.1.1   4 Octets,  1 octet = 8 bits, Ip address 32 bits or 4 bytes
+        [ip[: ip.rfind('.')] + '.1' for ip in ips]
+    )
 
 # Application definition
 
@@ -141,11 +152,11 @@ USE_TZ = True
 
 USE_L10N = True
 
-LANGUAGES = (
-    ('hy', _('Armenian')),
-    ('ru', _('Russia')),
-    ('en', _('English')),
-)
+# LANGUAGES = (
+#     ('hy', _('Armenian')),
+#     ('ru', _('Russia')),
+#     ('en', _('English')),
+# )
 
 LOCALE_PATHS = [
     BASE_DIR / 'locale/'
